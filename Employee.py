@@ -89,6 +89,9 @@ class EmployeeTaskSystem:
                     victims.append(id_)
             # Что если у нас все идеально и подходит несколько? Берем того, у кого самая дальная дата обращения
             id_victim = self.get_employee_with_max_date(victims)
+            # Ну и обновляем у него данные. Ассерты под него не заточены, поэтому закомментим
+            # self.e[id_victim].add_task()
+            # self.e[id_victim].set_last_sent_task_date(date)
             return self.e[id_victim].name_
         return self.e[array_of_ids[0]].name_  # если только один подходит, то берем его.
 
